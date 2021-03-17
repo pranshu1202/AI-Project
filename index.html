@@ -1,16 +1,67 @@
 <html>
 <head>
     <script type="text/javascript" src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="main.css"></style>
+    <style>
+        .button {
+        border: none;
+        color: white;
+        padding: 8px 16px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        transition-duration: 0.4s;
+        cursor: pointer;
+}
+       .button1 {
+        background-color: white; 
+        color: black; 
+        border: 2px solid #008CBA;
+        }
+      
+       .button1:hover {
+        background-color: #008CBA;
+        color: white;
+        }
     </style>
 </head>
 <body>
-<div id="graph"></div>
-<p>Add node:</p>
-<input id="node-name" type="text">
-<button onclick="addNode();">Add</button>
 
-<script type="text/javascript" src="index.js">
+<h2>Add Node:</h2>
+<input id="node-insert" type="text" placeholder="Node name">
+<input id="heuristic" type="text"placeholder="Heuristic Value">
+<button class="button button1" onclick="addNode();">Add </button>
+
+<h2>Delete Node:</h2>
+<input id="node-delete" type="text"placeholder="Node to Delete">
+<button class="button button1" onclick="delNode();">Delete </button>
+
+<h2>Add Edge:</h2>
+<input id="node-from" type="text" placeholder="From Node">
+<input id="node-to" type="text" placeholder="To Node">
+<input id="weight" type="integer" placeholder="Weight">
+<button class="button button1" onclick="addEdge();">Add </button>
+
+<h2>Delete Edge:</h2>
+<input id="node-from2" type="text" placeholder="From Node">
+<input id="node-to2" type="text" placeholder="To Node">
+<button class="button button1" onclick="DelE();">Delete </button>
+
+<h2>Update Weight:</h2>
+<input id="node-from1" type="text" placeholder="From Node">
+<input id="node-to1" type="text" placeholder="To Node">
+<input id="new-weight" type="text" placeholder="New Weight">
+<button class="button button1" onclick="UpdW();">Update</button>
+
+<h2>Update Heuristic Value:</h2>
+<input id="node1" type="text" placeholder="Node Name">
+<input id="heuristic1" type="text" placeholder="New Heuristic Value">
+<button class="button button1" onclick="UpdH();">Update</button>
+
+<script type="text/javascript" src="index.js"></script>
+<div id="graph"></div>
 </script>
 </body>
 </html>
